@@ -5,7 +5,7 @@ from sklearn.linear_model import LinearRegression
 
 
 DATA_X = [1, 2, 3, 4]  # Enter your data for X here (args).
-DATA_Y = [1, 2, 3, 6]  # Enter your data for X here (results).
+DATA_Y = [1, 2, 3, 6]  # Enter your data for Y here (results).
 
 CAPTION_X = ''  # Your X caption here.
 CAPTION_Y = ''  # Your Y caption here.
