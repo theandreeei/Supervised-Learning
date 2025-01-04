@@ -3,25 +3,25 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn.linear_model import LinearRegression
 
+
+DATA_X = [1, 2, 3, 4]  # Enter your data for X here (args).
+DATA_Y = [1, 2, 3, 6]  # Enter your data for X here (results).
+
+CAPTION_X = ''  # Your X caption here.
+CAPTION_Y = ''  # Your Y caption here.
+
 # Data
 data = {
-    'Days': [1, 2, 3, 4, 5],
-    'Candies': [2, 4, 6, 8, 10],
+    'X': DATA_X,
+    'Y': DATA_Y,
 }
 
 df = pd.DataFrame(data)
-print(df)
-
-# Visualisation of data
-plt.scatter(df['Days'], df['Candies'], color='blue')
-plt.title('Dependency graph')
-plt.xlabel('Days')
-plt.ylabel('Candies')
-# plt.show()
+print(df)  # X, Y Table output.
 
 # X days and Y candies
-X = df[['Days']]
-Y = df['Candies']
+X = df[['X']]
+Y = df['Y']
 
 # Creating and learning of Model
 model = LinearRegression()
@@ -38,8 +38,8 @@ Y_pred = model.predict(X)
 plt.scatter(X, Y, color='blue')
 plt.plot(X, Y_pred, color='red')
 plt.title('Line regression')
-plt.xlabel('Days')
-plt.ylabel('Candies')
+plt.xlabel(CAPTION_X)
+plt.ylabel(CAPTION_Y)
 plt.show()
 
 # Forecast
